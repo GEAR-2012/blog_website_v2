@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+
+      <h1><%=title%></h1>
+      <p><%=body%></p>
+      <form action="/update/<%=_id%>" method="get">
+            <button class="btn btn-outline-primary mb-2" type="submit">Edit this post</button>
+      </form>
+      <form action="/delete/<%=_id%>" method="post">
+            <button class="btn btn-outline-danger" type="submit">Delete this post</button>
+      </form>
+
+<%- include('partials/footer') %>

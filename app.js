@@ -14,9 +14,9 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 mongoose.set("strictQuery", true);
 
-const dbName = "blogPostDB";
-const dbUserName = "admin-sandor";
-const dbPassword = "Test123";
+const dbName = process.env.DB_NAME;
+const dbUserName = process.env.DB_USER_NAME;
+const dbPassword = process.env.DB_PASSWORD;
 const uri = `mongodb+srv://${dbUserName}:${dbPassword}@cluster0.i8f6e4b.mongodb.net/${dbName}?retryWrites=true&w=majority`;
 
 main();
